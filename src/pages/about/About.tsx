@@ -41,16 +41,16 @@ const About = ({pokemons}:any)=> {
                 return sort_order * (parseInt(a.id) - parseInt(b.id))
             })
             FilterPokemons(local_filter_pokemon)
-        } else if (sort_type === "weight") {
-            let local_filter_pokemon = pokemons.filter((element:any) => {
-                let prefixed = query_prefix.trim().toLowerCase()
-                let element_name = String(element.name).trim().toLowerCase()
-                return prefixed.length === 0 || prefixed === element_name.substring(0, prefixed.length)
-            })
-            local_filter_pokemon = local_filter_pokemon.sort((a:any, b:any)=>{
-                return sort_order * (parseInt(a.weight) - parseInt(b.weight))
-            })
-            FilterPokemons(local_filter_pokemon)
+        // } else if (sort_type === "weight") {
+        //     let local_filter_pokemon = pokemons.filter((element:any) => {
+        //         let prefixed = query_prefix.trim().toLowerCase()
+        //         let element_name = String(element.name).trim().toLowerCase()
+        //         return prefixed.length === 0 || prefixed === element_name.substring(0, prefixed.length)
+        //     })
+        //     local_filter_pokemon = local_filter_pokemon.sort((a:any, b:any)=>{
+        //         return sort_order * (parseInt(a.weight) - parseInt(b.weight))
+        //     })
+        //     FilterPokemons(local_filter_pokemon)
         } else {
             FilterPokemons(pokemons)
         }
@@ -90,10 +90,10 @@ const About = ({pokemons}:any)=> {
                                 <img src={pokeball} alt="pokeball" style={sort_type==="id" ? {"rotate": "-40deg"} : {}} />
                                 <input type="submit" value="id" name="id" className="button" onClick={(event)=>{event.preventDefault();handleOnClick("id")}}/>
                             </div>
-                            <div className='button_container'>
+                            {/* <div className='button_container'>
                                 <img src={pokeball} alt="pokeball" style={sort_type==="weight" ? {"rotate": "-40deg"} : {}} />
                                 <input type="submit" value="weight" name="weight" className="button" onClick={(event)=>{event.preventDefault();handleOnClick("weight")}}/>
-                            </div>
+                            </div> */}
                             <div className='button_container'>
                                 <img src={pokeball} alt="pokeball" style={sort_order===1 ? {"rotate": "-40deg"} : {}} />
                                 <input type="submit" value="ascending" name="ascending" className="button" onClick={(event)=>{event.preventDefault();handleChangeOrder(1)}}/>
