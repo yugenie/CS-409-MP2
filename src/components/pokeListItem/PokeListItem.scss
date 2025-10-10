@@ -1,0 +1,32 @@
+$english_font: 'Gemunu Libre', sans-serif;
+
+.pokeListItem_main {
+    width: 90%;
+    height: 30px;
+    margin-top: 3px;
+    padding-inline: 10px;
+    display: flex;
+    border-radius: 5px;
+    justify-content: flex-start;
+    align-items: center;
+    text-decoration: none;
+    z-index: 30;
+    position: relative;
+    color: black;
+    background: rgba(255, 255, 255, 0.8);
+    border: 1px solid black;
+    font-family: $english_font;
+    overflow: hidden;
+    img {
+        position: absolute;
+        transform: none;
+        rotate: none;
+        animation: none;
+        height: 40px;
+        width: 40px;
+        top: 50%;
+        left: unset;
+        right: 10px;
+        transform: translateY(-50%);
+    }
+}

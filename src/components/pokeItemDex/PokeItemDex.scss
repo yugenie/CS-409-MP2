@@ -1,0 +1,89 @@
+$english_font: 'Gemunu Libre', sans-serif;
+
+.pokeItemDex_main {
+    width: 100vw;
+    height: 100vh;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #F76E59;
+    position: absolute;
+    top: 0;
+
+    .route {
+        font-size: xx-large;
+        position: absolute;
+        top: 50%;
+        left: 30px;
+        text-decoration: none;
+        color: white;
+        border-radius: 50%;
+    }
+
+    .route:nth-child(3) {
+        left: unset;
+        right: 30px
+    }
+
+    .frame {
+        width: min(70vw, 70vh);
+        height: min(70vw, 70vh);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 3px solid #F76E59;
+        border-radius: 10px;
+        position: relative;
+        flex-wrap: wrap;
+        background-color: rgba(255, 255, 255, 0.2);
+        box-shadow: 0 6px 40px rgba(0, 0, 0, 0.5);
+        backdrop-filter: blur(10px);
+        .pokemon_images {
+            width: 49%;
+            height: 49%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                width: 50%;
+            }
+        }
+
+        .basic_info {
+            width: 49%;
+            height: 59%;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .title {
+                width: 100%;
+                text-align: center;
+                font-family: $english_font;
+                margin-top: 4px;
+                font-size: 20px;
+            }
+        }
+
+        .pokemon_stats {
+            width: 100%;
+            height: 40%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            .pokemon_stat {
+                font-family: $english_font;
+                width: 30%;
+                text-align: center;
+                font-size: 17px;
+            }
+        }
+    }
+}

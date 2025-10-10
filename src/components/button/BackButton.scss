@@ -1,0 +1,33 @@
+$poke_red: #F76E59;
+#back_button {
+    position: fixed;
+    top: 30px;
+    left: 30px;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+    background-color: transparent;
+    transition: 0.5s cubic-bezier(0.42, 0, 0.58, 1.0);
+    z-index: 30;
+}
+
+#back_button::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 0%;
+    left: 0%;
+    border-bottom: 3px solid red;
+    transition: 0.4s;
+}
+
+#back_button:hover:before {
+    width: 100%;
+}

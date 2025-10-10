@@ -1,13 +1,19 @@
 # MP 2: New Clear REACTive App
-### Due: October 7th, 2025, 11:59PM CDT
+### Due: October 21st, 2022, 11:59PM CDT
 
 ## Table of Contents
-1. [Assignment](#assignment)
-2. [Grading Breakdown](#grading-breakdown)
-3. [Tips](#tips)
-4. [Rules](#rules)
-5. [Getting Started](#getting-started)
-6. [Submission Details](#submission-details)
+- [MP 2: New Clear REACTive App](#mp-2-new-clear-reactive-app)
+    - [Due: October 21st, 2022, 11:59PM CDT](#due-october-21st-2022-1159pm-cdt)
+  - [Table of Contents](#table-of-contents)
+  - [Assignment](#assignment)
+      - [Task](#task)
+      - [Requirements](#requirements)
+  - [Grading Breakdown](#grading-breakdown)
+  - [Tips](#tips)
+  - [Rules](#rules)
+  - [Getting Started](#getting-started)
+    - [Create React App](#create-react-app)
+  - [Submission Details](#submission-details)
 
 ## Assignment
 
@@ -20,12 +26,12 @@ Create a single-page React app that lets users interact with the data from one o
   - [Pokemon](https://pokeapi.co/)
   - [NASA](https://api.nasa.gov/index.html)
   - [Marvel](https://developer.marvel.com/)
-  - [Jelly Belly Wiki](https://jelly-belly-wiki.netlify.app/)
-  - [The Meal DB](https://www.themealdb.com/api.php)
+  - [COVID-19](https://covid19api.com/) (5 req/second)
+  - [CoinAPI](https://www.coinapi.io/)
+  - [Balldontlie](https://www.balldontlie.io/) 
   - [Art Institute of Chicago](https://api.artic.edu/docs/) 
-  - More APIs if you want to explore [here](https://publicapis.dev) (please keep it class appropriate) 🫵🤨📸.
 
-**Note that you may need to create an account and/or acquire an API key for some of the APIs. GitHub won’t restrict you from pushing API keys, but may send an email to say some keys are exposed. Because of this, please don't use any paid APIs.**
+**Note that you may need to create an account and/or acquire an API key for some of the APIs.**
 
 **The API you are working with may become temporarily unavailable. If/when this happens, it doesn't mean you are blocked from working on the MP. You can mock the data, i.e. create a local hard coded response and use that instead of making the request.**
 
@@ -43,7 +49,7 @@ Here's an old example that fulfills these requirements: https://www.youtube.com/
 You will also be required to use following tools:
   - Use [React Router](https://reactrouter.com/web/guides/quick-start) for routing.
   - Use [Axios](https://www.npmjs.com/package/axios) for API calls.
-  - Use [TypeScript](https://www.typescriptlang.org/docs/handbook/react.html).
+  - Use [PropTypes](https://facebook.github.io/react/docs/typechecking-with-proptypes.html) or [TypeScript](https://www.typescriptlang.org/docs/handbook/react.html).
 
 ## Grading Breakdown
 Total Points : 100
@@ -65,7 +71,7 @@ Details View:
   - Do the PREVIOUS and NEXT buttons work correctly?  (10 points)
 
 Other:
-  - Does the implementation use React Router and TypeScript?  (12 points)
+  - Does the implementation use React Router and PropTypes/TypeScript?  (12 points)
   - Design (10 points)
 
 ## Tips
@@ -90,58 +96,22 @@ Other:
 3. Open up `src/app.js` to start building your first component. Visit https://reactjs.org/docs/getting-started.html for many official, high quality resources to help get you started.
 
 ### Create React App
-`create-react-app` is a tool that allows you to generate a react starter project that requires no immediate configuration. Visit the [getting started guide](https://facebook.github.io/create-react-app/docs/getting-started) to read more. You should use `create-react-app` with the [Typescript template](https://create-react-app.dev/docs/getting-started/#creating-a-typescript-app).
+`create-react-app` is a tool that allows you to generate a react starter project that requires no immediate configuration. Visit the [getting started guide](https://facebook.github.io/create-react-app/docs/getting-started) to read more.
 
-You may be wondering how the command `npx create-react-app my-app --template typescript` works and why there is no installation step. Click [here](https://www.bram.us/2017/07/15/introducing-npx-an-npm-package-runner/) for an explanation of `npx`.
+You may be wondering how the command `npx create-react-app my-app` works and why there is no installation step. Click [here](https://www.bram.us/2017/07/15/introducing-npx-an-npm-package-runner/) for an explanation of `npx`.
 
 
 ## Submission Details
 
 Here's what you will need to submit:
-1. Clone the repository `git clone git@github.com:cs409-fa25/mp2.git`
-2. On local machine, run `npx create-react-app mp2 --template typescript` to create starter code and `cd mp2` to enter into React app directory. The `create-react-app` will set up the git environment for you.
-  - If it doesn't work becausee the folder exists, instead, make the react app in a different directory and copy it over into this repo OR copy the `.github` folder and all files within to your created React project.
-4. Add `"homepage": "https://<your-github-username>.github.io/<your-github-repo-name>"` to your `package.json`
+1. Create a private repository on GitLab. Make sure "Initialize this repository with a README" is **not** checked. **Do not clone this repository to your local machine! Steps 2-4 set up the local GitLab repo for you.**
+2. On local machine, run `npx create-react-app mp2` to create starter code and `cd mp2` to enter into react app directory. **Do not clone your git repo and run create-react-app in it**. The `create-react-app` will set up the git environment for you.
+3. Add url of the private repository you created as the remote url for your react app.
 ```
-{
-  "name": "your-app-name",
-  "version": "0.1.0",
-  "private": true,
-  "homepage": "https://<your-github-username>.github.io/<your-github-repo-name>",
-  //...
-}
+git remote add origin <your-repo-url>
 ```
-4. In your `BrowserRouter` or `Router` component, set `basename="/<your-github-repo-name>"`
-```
-<BrowserRouter basename="/<your-github-repo-name>">
-  ...
-</BrowserRouter>
-```
-  - Note: Should use `<Link/>` component instead of `<a>` to have the same basename.
-3. [Create a public repository on GitHub.](https://docs.github.com/en/repositories/creating-and-managing-repositories/creating-a-new-repository) Make sure "Initialize this repository with a README" is **not** checked.
-4. Set GitHub Pages Deployment Source to Github Actions
-   - In your Github repo, go to Settings > Pages > Build and Deployment > Source > Select "GitHub Actions"
-5. Change the remote url for your local mp2 directory to the url of the new public repository you created.
-```
-git remote rename origin old-origin
-git remote add origin git@github.com:<your-github-username>/mp2.git
-# run `git remote -v` to check your origin 
-```
-6. Commit and push your local changes to this new repository.
-```
-git add . # "." adds all changed files, can also add specific files too
-git commit -m "[my-commit-message]" # message should be clear and meaningful
-git branch -M main
-git push origin main
-```
-7. `.github/workflows/deploy.yml` file automatically makes a GitHub CI pipeline run to deploy your code. After the pipeline finishes, your site should be live at `https://<your-github-username>.github.com/mp2`. **It should take around 1 minute.**
-8. Make a video (3 minutes max) demo-ing your deployed website and upload it to Google Drive. Share it with `uiuc.web.programming@gmail.com` and put the share link in the Google form.
-- Show the url to prove you are on your deployed website. Then show all the requirement features you fulfilled in your mp.
-- If you were unable to deploy your website, you can demo your mp locally for some point deduction (hard capped at 80%)
-  - Just make sure you do `git status` and `git log` first so we can see your last edits.
-9. Fill out and submit the form [here](https://forms.gle/E7qr5MbSnxFCLpaV7).
-
-## Large Language Model (LLM) Usage Policy
-We acknowledge the transformative potential of LLMs in generating code; however, we are still in the nascent stages of understanding how to embed LLMs in developer workflows to write code more efficiently while maintaining quality. Therefore, we will not be teaching students directly how to use LLMs to develop web applications.
-
-As part of this class, we do encourage students to experiment with LLM services such as OpenAI's ChatGPT to generate source code for MPs. If LLMs are used to generate code for an MP, students must (1) submit their chatlogs along with their source code, and (2) answer survey questions related to their experience using LLMs in the grading form. Failure to do this will be a violation of the academic integrity policy of this course.
+4. Copy over our `.gitlab-ci.yml` file from this repostiory to your local repository, **make sure you name the file exactly like it is on this repository (remember the period at the front) or else your pipeline won't run properly.**.
+5. Commit and push your local changes to this new repository.
+6. `.gitlab-ci.yml` file automatically makes a Gitlab CI pipeline run to deploy your code. After the pipeline finishes, your site should be live at `https://<your-gitlab-username>.gitlab.io/mp2`. **It may take up to 10-30 minutes for the site to go live after the first deployment.**
+7. Invite `uiucwp` as a collaborator. This should be as a **reporter**, not as a *guest*, otherwise we can't see your code.
+8. Fill out and submit the form [here](https://forms.gle/QQx5se1bADoBDiNL9).

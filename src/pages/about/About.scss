@@ -1,0 +1,137 @@
+$english_font: 'Gemunu Libre', sans-serif;
+
+.about_page {
+    background-color: #F76E59;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    img {
+        position: absolute;
+        bottom: 3vh;
+        left: 3vw;
+        rotate: 320deg;
+        width: min(50vw, 50vh, 1000px);
+        animation: rotate 8s infinite;
+        transform-origin: center;
+    }
+
+
+    @keyframes rotate {
+        0% {
+            rotate: 320deg;
+        }  
+        100% {
+            rotate: 680deg;  
+        } 
+    }
+    .list_view {
+        width: 80vw;
+        height: 80vh;
+        transform: translateY(5vh);
+        border-radius: 5px;
+        // background-color: darkgrey;
+        background-color: rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+        border-radius: 20px;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        .query_view {
+            width: 38vw;
+            height: 78vh;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            form {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                font-family: $english_font;
+            }
+
+            .input {
+                border: 2px solid black;
+                width: 30vw;
+                height: 40px;
+                border-radius: 10px;
+                background-color: rgba(255, 255, 255, 0.2);
+                font-family: $english_font;
+                font-size: 17px;
+                padding-inline: 10px
+            }
+
+            .button_list {
+                width: 80%;
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            
+            .button_container {
+                width: 80%;
+                height: 60px;
+                position: relative;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                margin: 10px;
+                overflow: visible;
+                img {
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translateX(calc(-50% + 5px)) translateY(-50%);
+                    rotate: none;
+                    width: 30px;
+                    height: 30px;
+                    animation-name: none;
+                    transform-origin: 0px 10px;
+                }
+            }
+            .button {
+                width: 100%;
+                // height: 25px;
+                padding-block: 5px;
+                // margin: 5px;
+                border-radius: 5px;
+                font-size: 20px;
+                font-family: $english_font;
+            }
+
+            .input:focus {
+                outline: none;
+            }
+
+            .text {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        .result_view {
+            width: 38vw;
+            height: 78vh;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}

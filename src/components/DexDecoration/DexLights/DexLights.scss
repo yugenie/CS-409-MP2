@@ -1,0 +1,50 @@
+.lights {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid black;
+    text-decoration: none;
+}
+
+.dexLights {
+    margin: 10px;
+    width: 50%;
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.bigLight {
+    width: 75px;
+    height: 75px;
+    display: flex;
+    border-radius: 50%;
+    border: 10px solid white;
+    text-decoration: none;
+    background-color: #05DBFF;
+    justify-content: center;
+    align-items: center;
+    font-size: 0;
+    transition: 0.3s;
+}
+
+.bigLight:hover {
+    background-color: #E3350D;
+    border-color: black;
+}
+
+.lights:nth-child(2) {
+    background-color: #FCD63E;
+    box-shadow: 0 4px 30px #FCD63E;
+}
+
+.lights:nth-child(1) {
+    background-color: #C92F48;
+    box-shadow: 0 4px 30px #C92F48;
+}
+
+.lights:nth-child(3) {
+    background-color: #578B6C;
+    box-shadow: 0 4px 30px #578B6C;
+}

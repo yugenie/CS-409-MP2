@@ -1,0 +1,13 @@
+$english_font: 'Gemunu Libre', sans-serif;
+.DexButton {
+    border: 1px solid black;
+    width: 40%;
+    padding-block: 1px;
+    margin-inline: 5px;
+    margin-block: 10px;
+    font-size: 20px;
+    text-align: center;
+    padding-block: 4px;
+    border-radius: 5px;
+    font-family: $english_font;
+}

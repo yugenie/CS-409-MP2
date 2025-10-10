@@ -1,0 +1,16 @@
+.dexFrame {
+    position: relative;
+    width: 100%;
+    height: 120px;
+    background-color: #E32932;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 50%, 10% 100%, 0% 100%);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.dexLights {
+    margin: 10px;
+    width: 50%;
+    flex-direction: row;
+}
