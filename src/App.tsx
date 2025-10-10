@@ -38,7 +38,8 @@ const App = () => {
     }, [])
 
     return (
-        <Router basename="/CS-409-MP2">
+        // <Router basename="/CS-409-MP2">
+        <Router>
             <Routes>
                 <Route index element={<Main pokemon={allPokemons}/>} />
                 <Route path="/about" element={<About pokemons={allPokemons}/>} />
